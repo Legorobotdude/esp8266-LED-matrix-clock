@@ -6,13 +6,13 @@
 #include <Max72xxPanel.h>
 
 int pinCS = 16; // Attach CS to this pin, DIN to MOSI and CLK to SCK (cf http://arduino.cc/en/Reference/SPI )
-int numberOfHorizontalDisplays = 4;
+int numberOfHorizontalDisplays = 4;//adjust this to your setup
 int numberOfVerticalDisplays = 1;
 
 Max72xxPanel matrix = Max72xxPanel(pinCS, numberOfHorizontalDisplays, numberOfVerticalDisplays);
 
 
-const int wait = 100; // In milliseconds
+const int wait = 100; 
 const int length = 8;
 const char *ssid     = "SSID";
 const char *password = "PASSWORD";
@@ -36,26 +36,26 @@ void setup() {
   // put your setup code here, to run once:
 matrix.setIntensity(4); // Set brightness between 0 and 15
 
- matrix.setRotation(0, 1);
+ matrix.setRotation(0, 1);//you may have to change this
   matrix.setRotation(1,1);
    matrix.setRotation(2,1);
     matrix.setRotation(3,1);
     matrix.setTextSize(1);
-  matrix.setTextWrap(false);  // we dont want text to wrap so it scrolls nicely
+  matrix.setTextWrap(false); 
   matrix.setTextColor(HIGH);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-timeClient.update();
+
+timeClient.update();//updates time
 
   
     matrix.fillScreen(LOW);
     matrix.setCursor(0,0);
     matrix.print(timeClient.getFormattedTime());
     matrix.write();
-    delay(5000);
+    delay(5000);//adjust to what you want
 
 
-//matrix.write();
+
 }
