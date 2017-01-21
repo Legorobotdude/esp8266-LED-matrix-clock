@@ -13,4 +13,4 @@ Wire CLK to CLK and MOSI to DIN. The CS pin from the 7219 can be connected to an
 
 Adjust the matrix rotation in the setup for your Matrices.
 
-Make sure you have the[(MAX72XX Panel Library](https://github.com/markruys/arduino-Max72xxPanel) and the [NTP Client Library](https://github.com/arduino-libraries/NTPClient) installed. (Note that the Max72xx library requires the Adafruit GFX library.)
+Make sure you have the [MAX72XX Panel Library](https://github.com/markruys/arduino-Max72xxPanel) and the [NTP Client Library](https://github.com/arduino-libraries/NTPClient) installed. (Note that the Max72xx library requires the Adafruit GFX library.)
