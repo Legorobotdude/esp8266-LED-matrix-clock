@@ -9,4 +9,6 @@ You will need wire the ESP8266's hardware SPI to the MAX7219. For most ESP8266 t
 SPI CLK = GPIO14
 SPI MOSI = GPIO13
 SPI MISO = GPIO12
-Wire CLK to CLK and MOSI to DIN. The CS pin from the 7219 can be connected to any GPOI, just define it in the code. The default is 16.
+Wire CLK to CLK and MOSI to DIN. The CS pin from the 7219 can be connected to any GPIO, just define it in the code. The default is 16.
+
+Adjust the matrix rotation in the setup for your Matrices.
