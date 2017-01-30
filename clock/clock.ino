@@ -82,7 +82,7 @@ void setup() {
  
   matrix.setIntensity(4); // Set brightness between 0 and 15
 
-  matrix.setRotation(0, 1);//you may have to change this
+  matrix.setRotation(0, 1);//you may have to change this section depending on your LED matrix setup
   matrix.setRotation(1,1);
   matrix.setRotation(2,1);
   matrix.setRotation(3,1);
@@ -92,15 +92,16 @@ void setup() {
 }
 
 void loop() {
+
 MQTT_connect();
 timeClient.update();//updates time
 
   
-    matrix.fillScreen(LOW);//Empty the screen
-    matrix.setCursor(0,0);//Move the cursor to the end of the screen
-    matrix.print(timeClient.getFormattedTime());//Write the time
-    matrix.write();
-    delay(5000);//adjust to how often you want the clock to update
+matrix.fillScreen(LOW);//Empty the screen
+matrix.setCursor(0,0);//Move the cursor to the end of the screen
+matrix.print(timeClient.getFormattedTime());//Write the time
+matrix.write();
+delay(5000);//adjust to how often you want the clock to update
 
 mqtt.ping();
 
