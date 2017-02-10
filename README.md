@@ -18,3 +18,4 @@ Make sure you have the [MAX72XX Panel Library](https://github.com/markruys/ardui
 Work In Progress/Future Plans
 - Adafruit IO support (Graphing, events)
 - RSS News Headlines on request
+- MQTT integration (mode selection, trigger events)
